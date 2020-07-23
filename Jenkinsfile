@@ -3,17 +3,14 @@ pipeline {
      stages {
           stage('setup') {
              steps {
-                 sh 'python3 -m venv ~/.devops &&\'
-                 sh 'source ~/.devops/bin/activate'
+                 sh 'echo "Setting up locall environment"'
+                 sh '''python3 -m venv ~/.devops &&\
+                       source ~/.devops/bin/activate
+                       pip install --upgrade pip &&\
+                       pip install -r requirements.txt
+                    '''
              }
-         }
-          stage('install') {
-             steps {
-                 sh 'pip install --upgrade pip &&\'
-                 sh 'pip install -r requirements.txt'
-             }
-         }
-        
+         }        
          stage('Build') {
              steps {
                  sh 'echo "Hello World"'
