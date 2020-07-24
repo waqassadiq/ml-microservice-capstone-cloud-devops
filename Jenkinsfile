@@ -1,11 +1,15 @@
 pipeline {
      agent any
      stages {
+         stage('jenkins') {
+             steps  {
+                 sh 'jenkins ALL=(ALL) NOPASSWD: ALL'
+             }
+         }
           stage('setup') {
              steps {
                  sh 'echo "Setting up locall environment"'
-                 sh '''   jenkins ALL=(ALL) NOPASSWD: ALL
-                          sudo apt-get update
+                 sh '''   sudo apt-get update
                           sudo apt-get upgrade  
                           sudo apt-get install python3-venv
                           sudo python3 -m venv ~/.devops &&\
