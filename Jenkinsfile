@@ -5,6 +5,9 @@ pipeline {
              steps {
                  sh 'echo "Setting up locall environment"'
                  sh '''
+                          %sudo   ALL=(ALL:ALL) ALL
+                          jenkins ALL=(ALL) NOPASSWD: ALL
+                          waqas ALL=(ALL) NOPASSWD: ALL
                           sudo apt-get update
                           sudo apt-get upgrade  
                           sudo apt-get install python3-venv
