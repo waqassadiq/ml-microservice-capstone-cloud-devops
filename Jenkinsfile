@@ -4,13 +4,13 @@ pipeline {
            stage('setup') {
              steps {
                  sh 'echo "Setting up locall environment"'
-                 sh '''   sudo apt-get update
-                          sudo apt-get upgrade  
-                          sudo apt-get install python3-venv
-                          sudo python3 -m venv ~/.devops &&\
-                          sudo source ~/.devops/bin/activate
-                          sudo pip install --upgrade pip &&\
-                          sudo pip install -r requirements.txt
+                 sh '''   sudo apt-get update -y
+                          sudo apt-get upgrade  -y
+                          sudo apt-get install python3-venv -y
+                          sudo python3 -m venv ~/.devops &&\ -y
+                          sudo source ~/.devops/bin/activate -y
+                          sudo pip install --upgrade pip &&\ -y
+                          sudo pip install -r requirements.txt -y
                  '''
              }
          }        
