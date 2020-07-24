@@ -11,8 +11,8 @@ pipeline {
                           . ~/.devops/bin/activate
                           which python
                           sudo apt-get install python-pip -y
-                          pip install --upgrade pip &&\
-                          pip install -r requirements.txt -y
+                          sudo pip install --upgrade pip &&\
+                          sudo pip install -r requirements.txt -y
                  '''
              }
          }        
