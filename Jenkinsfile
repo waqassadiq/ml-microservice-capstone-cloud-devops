@@ -10,7 +10,7 @@ pipeline {
                           sudo python3 -m venv ~/.devops &&\
                           . ~/.devops/bin/activate
                           which python
-                          ssudo apt install python3-pip -y
+                          sudo apt install python3-pip -y
                           sudo pip3 install --upgrade pip3 &&\
                           sudo pip3 install -r requirements.txt
                  '''
