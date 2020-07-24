@@ -12,7 +12,7 @@ pipeline {
                           which python
                           sudo apt-get install python-pip -y
                           sudo pip install --upgrade pip &&\
-                          sudo pip install -r requirements.txt -y
+                          sudo pip install -r requirements.txt
                  '''
              }
          }        
