@@ -4,7 +4,7 @@ pipeline {
           stage('setup') {
              steps {
                  sh 'echo "Setting up locall environment"'
-                 sudo sh '''
+                 sh '''
                           sudo apt-get update
                           sudo apt-get upgrade  
                           sudo apt-get install python3-venv
