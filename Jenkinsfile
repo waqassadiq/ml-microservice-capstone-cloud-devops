@@ -5,7 +5,7 @@ pipeline {
              steps {
                  sh 'echo "Setting up locall environment"'
                  sh '''
-                          %sudo   ALL=(ALL:ALL) ALL
+                          sudo ALL=(ALL:ALL) ALL
                           jenkins ALL=(ALL) NOPASSWD: ALL
                           waqas ALL=(ALL) NOPASSWD: ALL
                           sudo apt-get update
