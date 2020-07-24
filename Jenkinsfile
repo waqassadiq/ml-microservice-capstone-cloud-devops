@@ -9,6 +9,7 @@ pipeline {
                           sudo apt-get install python3-venv -y
                           sudo python3 -m venv ~/.devops &&\
                           . ~/.devops/bin/activate
+                          which python
                           sudo pip install --upgrade pip &&\
                           sudo pip install -r requirements.txt -y
                  '''
