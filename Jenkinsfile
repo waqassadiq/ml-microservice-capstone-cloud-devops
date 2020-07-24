@@ -11,8 +11,8 @@ pipeline {
                           . ~/.devops/bin/activate
                           which python
                           sudo apt install python3-pip -y
-                          sudo pip install --upgrade pip &&\
-                          sudo pip install -r requirements.txt
+                          //sudo pip3 install --upgrade pip3 &&\
+                          sudo pip3 install -r requirements.txt
                  '''
              }
          }        
