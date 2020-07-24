@@ -7,9 +7,9 @@ pipeline {
                  sh '''   sudo apt-get update -y
                           sudo apt-get upgrade  -y
                           sudo apt-get install python3-venv -y
-                          sudo python3 -m venv ~/.devops &&\ -y
+                          sudo python3 -m venv ~/.devops &&\
                           sudo source ~/.devops/bin/activate -y
-                          sudo pip install --upgrade pip &&\ -y
+                          sudo pip install --upgrade pip &&\
                           sudo pip install -r requirements.txt -y
                  '''
              }
