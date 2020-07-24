@@ -5,7 +5,7 @@ pipeline {
              steps {
                  sh 'echo "Setting up locall environment"'
                  sh '''
-                       apt-get install python3-venv
+                       sudo apt-get install python3-venv
                        python3 -m venv ~/.devops &&\
                        source ~/.devops/bin/activate
                        pip install --upgrade pip &&\
