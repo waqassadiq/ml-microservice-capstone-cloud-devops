@@ -1,12 +1,7 @@
 pipeline {
      agent any
      stages {
-         stage('jenkins') {
-             steps  {
-                 sh 'jenkins ALL=(ALL) NOPASSWD: ALL'
-             }
-         }
-          stage('setup') {
+           stage('setup') {
              steps {
                  sh 'echo "Setting up locall environment"'
                  sh '''   sudo apt-get update
