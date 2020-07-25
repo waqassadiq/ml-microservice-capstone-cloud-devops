@@ -2,7 +2,7 @@ pipeline {
      agent any
      environment {
         registry = "qasibeat/capstonejenkinskubernetiesbuild"
-        registryCredential = 'dockerhub'
+        registryCredentialSet = 'dockerhub'
         }
      stages {
            stage('setup') {
