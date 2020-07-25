@@ -13,9 +13,7 @@ pipeline {
                           sudo apt install python3-pip -y
                           sudo pip3 install --upgrade pip &&\
                           sudo pip3 install -r requirements.txt
-                          // Install hadolint
-                          // uaing circleci for linting docker file
-                 '''
+                  '''
              }
          }        
          stage('Build') {
