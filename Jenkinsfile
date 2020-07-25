@@ -25,7 +25,7 @@ pipeline {
                      sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
                      sudo apt update
                      sudo apt-cache policy docker-ce
-                     sudo apt install docker-ce
+                     sudo apt install docker-ce -y
                      sudo systemctl status docker
 
 
