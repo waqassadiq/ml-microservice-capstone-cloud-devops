@@ -16,12 +16,11 @@ pipeline {
                   '''
              }
          }        
-         stage('Build') {
+         stage('Docker Installation') {
              steps {
-                 sh 'echo "Hello World"'
+                 sh 'echo "Docker installation"'
                  sh '''
-                     echo "Multiline shell steps works too"
-                     ls -lah
+                     sudo apt-get install docker-ce docker-ce-cli containerd.io -y
                  '''
              }
          }
