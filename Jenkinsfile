@@ -47,15 +47,11 @@ pipeline {
                   sh 'sudo ./run_docker.sh'
               }
          }
-        stage('Deploy Image') {
-               steps{
-                    script {
-                        docker.withRegistry( '', registryCredential ) {
-                        dockerImage.push()
-                        }
-                    }
-               }
-}
+        stage('upload to repo') {
+              steps {
+                  sh 'sudo ./upload_docker.sh'
+              }
+         }
 
 
      }
