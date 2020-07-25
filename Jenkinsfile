@@ -30,5 +30,11 @@ pipeline {
                   sh 'pylint --disable=R,C,W1203 app.py'
               }
          }
+        stage('Lint Dockerfile') {
+              steps {
+                  sh 'hadolint Dockerfile'
+              }
+         }
+
      }
 }
