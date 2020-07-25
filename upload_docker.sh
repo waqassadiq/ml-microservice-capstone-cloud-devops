@@ -6,13 +6,13 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=qasibeat/project4attempt2
+dockerpath=qasibeat/capstonejenkinskubernetiesbuild
 
 # Step 2:  
 # Authenticate & tag
 # i have authenticated dockeer on ec2 instance
 # docker login --username=qasibeat
-docker tag $dockerpath $dockerpath:version1.0
+docker tag $dockerpath $dockerpath:latest
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
