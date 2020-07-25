@@ -2,7 +2,7 @@ pipeline {
      agent any
      environment {
         registry = "qasibeat/capstonejenkinskubernetiesbuild"
-        registryCredentialSet = 'dockerhub'
+        registryCredential = 'dockerhub'
         }
      stages {
            stage('setup') {
@@ -47,11 +47,15 @@ pipeline {
                   sh 'sudo ./run_docker.sh'
               }
          }
-        stage('upload to repo') {
-              steps {
-                  sh 'sudo ./upload_docker.sh'
-              }
-         }
+        stage('Deploy Image') {
+               steps{
+                    script {
+                        docker.withRegistry( '', registryCredential ) {
+                        dockerImage.push()
+                        }
+                    }
+               }
+}
 
 
      }
