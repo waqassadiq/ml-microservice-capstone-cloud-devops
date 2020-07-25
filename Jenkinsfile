@@ -14,9 +14,10 @@ pipeline {
                           sudo pip3 install --upgrade pip &&\
                           sudo pip3 install -r requirements.txt
                           // Install hadolint
-                          sudo chmod -R +x /var/lib/jenkins/workspace
-                          sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-                          chmod +x /bin/hadolint
+                          // uainf circleci for linting docker file
+                          //sudo chmod -R +x /var/lib/jenkins/workspace
+                          //sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+                          //chmod +x /bin/hadolint
 
                  '''
              }
@@ -35,9 +36,9 @@ pipeline {
                   sh 'pylint --disable=R,C,W1203 app.py'
               }
          }
-        stage('Lint Dockerfile') {
+        stage('build Docker Imagee') {
               steps {
-                  sh 'hadolint Dockerfile'
+                  sh 'sudo ./run_docker.sh'
               }
          }
 
