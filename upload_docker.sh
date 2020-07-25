@@ -10,7 +10,8 @@ dockerpath=qasibeat/project4attempt2
 
 # Step 2:  
 # Authenticate & tag
-docker login --username=qasibeat
+# i have authenticated dockeer on ec2 instance
+# docker login --username=qasibeat
 docker tag $dockerpath $dockerpath:version1.0
 echo "Docker ID and Image: $dockerpath"
 

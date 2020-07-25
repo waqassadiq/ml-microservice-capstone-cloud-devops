@@ -43,6 +43,12 @@ pipeline {
                   sh 'sudo ./run_docker.sh'
               }
          }
+        stage('upload to repo') {
+              steps {
+                  sh 'sudo ./upload_docker.sh'
+              }
+         }
+
 
      }
 }
