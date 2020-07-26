@@ -42,7 +42,7 @@ pipeline {
                   sh 'pylint --disable=R,C,W1203 app.py'
               }
          }
-        /*stage('build Docker Imagee') {
+        stage('build Docker Imagee') {
               steps {
                   sh 'sudo ./run_docker.sh'
               }
@@ -51,7 +51,7 @@ pipeline {
               steps {
                   sh 'sudo ./upload_docker.sh'
               }
-         }*/
+         }
 
 
      }
