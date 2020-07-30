@@ -15,6 +15,8 @@ echo "going to whoami"
 whoami
 
 echo "going to login"
+echo "Running ${env.DOCKER_USER} on ${env.DOCKER_PASSWORD}"
+
 sudo docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 #sudo docker login
 docker tag $dockerpath $dockerpath:latest
