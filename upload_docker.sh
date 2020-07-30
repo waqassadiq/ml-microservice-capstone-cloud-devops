@@ -11,8 +11,8 @@ dockerpath=qasibeat/capstonejenkinskubernetiesbuild
 # Step 2:  
 # Authenticate & tag
 # i have authenticated dockeer on ec2 instance
-#docker login --username=uname1
-sudo docker login
+docker login --username=qasibeat
+#sudo docker login
 docker tag $dockerpath $dockerpath:latest
 echo "Docker ID and Image: $dockerpath"
 
