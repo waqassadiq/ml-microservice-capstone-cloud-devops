@@ -14,8 +14,8 @@ dockerpath=qasibeat/capstonejenkinskubernetiesbuild
 echo "going to whoami"
 whoami
 
-sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-#sudo docker login
+#sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+sudo docker login
 docker tag $dockerpath $dockerpath:latest
 echo "Docker ID and Image: $dockerpath"
 
