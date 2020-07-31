@@ -14,9 +14,6 @@ dockerpath=qasibeat/capstonejenkinskubernetiesbuild
 echo "going to whoami"
 whoami
 
-echo "going to login"
-echo "Running $DOCKER_USER"
-
 sudo docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 #sudo docker login
 docker tag $dockerpath $dockerpath:latest

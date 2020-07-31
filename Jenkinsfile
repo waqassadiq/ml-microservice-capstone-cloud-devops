@@ -49,6 +49,10 @@ pipeline {
          }
         stage('upload to repo') {
               steps {
+                  sh '''
+                    echo "going to login"
+                    echo "Running ${env.DOCKER_USER}"
+                  '''
                   sh 'sudo ./upload_docker.sh'
               }
          }
