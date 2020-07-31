@@ -53,7 +53,7 @@ pipeline {
                   sh '''
                   dockerpath=qasibeat/capstonejenkinskubernetiesbuild
                   echo "Docker ID and Image: $dockerpath"
-                  docker login
+                  docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
                   docker tag $dockerpath $dockerpath:latest
                   docker push $dockerpath
                   '''
