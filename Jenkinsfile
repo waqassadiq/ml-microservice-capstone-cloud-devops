@@ -44,7 +44,7 @@ pipeline {
          }
         stage('build Docker Image') {
               steps {
-                  sh 'sudo ./run_docker.sh'
+                  sh './run_docker.sh'
               }
          }
         stage('upload to repo') {
@@ -53,9 +53,9 @@ pipeline {
                   sh '''
                   dockerpath=qasibeat/capstonejenkinskubernetiesbuild
                   echo "Docker ID and Image: $dockerpath"
-                  sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}'
+                  docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
                   docker tag $dockerpath $dockerpath:latest
-                  sudo docker push $dockerpath
+                  docker push $dockerpath
                   '''
                 }
          }
