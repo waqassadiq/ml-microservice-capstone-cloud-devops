@@ -50,8 +50,13 @@ pipeline {
         stage('upload to repo') {
               steps {
                   sh 'echo "trying loing from here "'
-                  sh 'sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}'
-                  sh 'sudo ./upload_docker.sh'
+                  sh '''
+                  dockerpath=qasibeat/capstonejenkinskubernetiesbuild
+                  echo "Docker ID and Image: $dockerpath"
+                  sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}'
+                  docker tag $dockerpath $dockerpath:latest
+                  sudo docker push $dockerpath
+                  '''
                 }
          }
 
