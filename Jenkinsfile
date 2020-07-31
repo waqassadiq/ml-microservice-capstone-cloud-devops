@@ -51,7 +51,7 @@ pipeline {
               steps {
                   sh '''
                     echo "going to login"
-                    echo "Running $DOCKER_USER"
+                    echo "Running ${DOCKER_USER}"
                   '''
                   sh 'sudo ./upload_docker.sh'
               }
