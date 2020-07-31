@@ -49,8 +49,10 @@ pipeline {
          }
         stage('upload to repo') {
               steps {
+                  sh 'echo "trying loing from here "'
+                  sh 'sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}'
                   sh 'sudo ./upload_docker.sh'
-              }
+                }
          }
 
 
