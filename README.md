@@ -68,4 +68,24 @@ Handling connection for 8000
 Handling connection for 8000
 
 ### Printing the kuberneties logs
-kubectl logs project4attempt2-56f6f56648-xxt7b
+
+### how to create a kuberneties cluster on AWS via ekctl (using cloudformation in the background)
+
+eksctl create cluster \
+--name prod \
+--version 1.17 \
+--region us-west-2 \
+--nodegroup-name linux-nodes \
+--node-type t2.micro \
+--nodes 2 \
+--nodes-min 1 \
+--nodes-max 2 \
+--ssh-access \
+--ssh-public-key jenkins-key-pair.pub \
+--managed
+
+### how to uplload file to ec2 instance
+scp -i (your key file )  (your file to copy) (your ec2 instance) (location on ec2)
+scp -i ec2-jenkins-keypair.pem jenkins-key-pair.pub ubuntu@ec2-34-215-255-178.us-west-2.compute.amazonaws.com:/home/ubuntu/
+
+
