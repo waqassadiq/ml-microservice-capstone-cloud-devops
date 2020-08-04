@@ -64,7 +64,7 @@ pipeline {
              sh 'echo "creating kuberneties cluster using EKSCTL"'
              sh '''
              eksctl create cluster \
-             --name prod \
+             --name capestone-bluegreen \
              --version 1.17 \
              --region us-west-2 \
              --nodegroup-name linux-nodes \
