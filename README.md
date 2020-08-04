@@ -88,4 +88,5 @@ eksctl create cluster \
 scp -i (your key file )  (your file to copy) (your ec2 instance) (location on ec2)
 scp -i ec2-jenkins-keypair.pem jenkins-key-pair.pub ubuntu@ec2-34-215-255-178.us-west-2.compute.amazonaws.com:/home/ubuntu/
 
-
+### Jenkins commands 
+sudo systemctl restart jenkins
