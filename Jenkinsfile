@@ -62,11 +62,8 @@ pipeline {
 
          stage('Create Kuberneties Custer'){
              steps {
-                sh 'echo "creating kuberneties cluster using EKSCTL"'
-                sh '''
-                eksctl create cluster --name prod --version 1.17 --region us-west-2 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 2 --ssh-access --ssh-public-key jenkins-key-pair.pub --managed
-                '''
-             }
+                sh './run_kubernetes.sh'
+              }
          }
 
 
