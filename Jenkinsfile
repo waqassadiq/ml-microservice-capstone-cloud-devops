@@ -62,7 +62,7 @@ pipeline {
 
          stage('Create Kuberneties Custer'){
              steps {
-                sh './run_kubernetes.sh'
+                sh 'sudo ./run_kubernetes.sh'
               }
          }
 
