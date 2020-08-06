@@ -6,7 +6,12 @@
 # Check your user
 whoami
 
+# Step 3:
+pwd
 # Step 2:
+ls -l
+# Step 4
+
 ## check rolels
 aws sts get-caller-identity
 # Step 3: 
