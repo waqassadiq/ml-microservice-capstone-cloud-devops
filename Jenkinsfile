@@ -60,11 +60,16 @@ pipeline {
                 }
          }
 
-         stage('Create Kuberneties Custer'){
+         stage('Create Kuberneties Cluster'){
              steps {
                 sh 'sudo ./run_kubernetes.sh'
               }
          }
+
+        stage('Create conf file EKS cluster') {
+               sh 'sudo ./run_conf_eks_cluster.sh'    
+        }
+
 
 
      }
