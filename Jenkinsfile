@@ -61,13 +61,13 @@ pipeline {
          }
         stage('Create Kuberneties Cluster'){
              steps {
-                sh 'sudo ./run_kubernetes.sh'
+                sh './run_kubernetes.sh'
               }
          }
 
         stage('conf file EKS cluster') {
             steps {
-               sh 'sudo ./run_current_eks_contxt.sh'    
+               sh './run_current_eks_contxt.sh'    
             }
         }
 
