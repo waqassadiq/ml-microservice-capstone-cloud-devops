@@ -67,7 +67,7 @@ pipeline {
 
         stage('Create conf file EKS cluster') {
             steps {
-               sh 'sudo ./run_conf_eks_cluster.sh'    
+               sh 'sudo ./run_current_eks_contxt.sh'    
             }
         }
 
