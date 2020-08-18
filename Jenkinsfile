@@ -59,15 +59,22 @@ pipeline {
                   '''
                 }
          }
-
-         stage('Create Kuberneties Cluster'){
+        stage('Create Kuberneties Cluster'){
              steps {
                 sh 'sudo ./run_kubernetes.sh'
               }
          }
 
         stage('Create conf file EKS cluster') {
+            steps {
                sh 'sudo ./run_conf_eks_cluster.sh'    
+            }
+        }
+
+        stage('Dploy blue app containr') {
+            steps {
+               sh 'kubectl apply -f ./blue-controller.json'    
+            }
         }
 
 
