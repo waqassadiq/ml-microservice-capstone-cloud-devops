@@ -90,3 +90,23 @@ scp -i ec2-jenkins-keypair.pem jenkins-key-pair.pub ubuntu@ec2-34-215-255-178.us
 
 ### Jenkins commands 
 sudo systemctl restart jenkins
+
+### Prune unused Docker objects
+
+## Prune images
+docker image prune
+
+To remove all images which are not used by existing containers, use the -a flag:
+docker image prune -a
+
+## Prune containers
+docker container prune
+
+## Prune volumes
+docker volume prune
+
+## Prune networks
+docker network prune
+
+## Prune everything
+docker system prune
