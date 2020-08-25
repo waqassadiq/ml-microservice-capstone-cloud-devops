@@ -77,6 +77,13 @@ pipeline {
             }
         }
 
+        stage('Dploy grreen app containr') {
+            steps {
+               sh 'kubectl apply -f ./grreen-controller.json'    
+            }
+        }
+
+
 
 
      }
