@@ -9,8 +9,8 @@
     },
     "spec":{
        "replicas":1,
-       "matchLabels":{
-         "selector":{
+       "selector":{
+         "matchLabels":{
              "app":"blue"
          }
       },
