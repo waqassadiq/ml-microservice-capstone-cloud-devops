@@ -1,6 +1,6 @@
 {
     "kind":"Deployment",
-    "apiVersion":"v1.0",
+    "apiVersion":"apps/v1",
     "metadata":{
        "name":"blue",
        "labels":{
@@ -9,9 +9,11 @@
     },
     "spec":{
        "replicas":1,
-       "selector":{
-          "app":"blue"
-       },
+       "matchLabels":{
+         "selector":{
+             "app":"blue"
+         }
+      },
        "template":{
           "metadata":{
              "labels":{
