@@ -77,9 +77,9 @@ pipeline {
             }
         }
 
-        stage('Dploy grreen app containr') {
+        stage('Dploy green app containr') {
             steps {
-               sh 'kubectl apply -f ./grreen-controller.json'    
+               sh 'kubectl apply -f ./green-controller.json'    
             }
         }
 
