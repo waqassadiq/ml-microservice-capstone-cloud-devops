@@ -82,6 +82,11 @@ pipeline {
                sh 'kubectl apply -f ./green-controller.json'    
             }
         }
+        stage('blue app lb') {
+            steps {
+               sh 'kubectl apply -f ./blue-green-service.json'    
+            }
+        }
 
 
 
